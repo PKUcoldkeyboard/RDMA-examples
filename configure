@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# 定义颜色
+GREEN="\033[1;32m"
+YELLOW="\033[1;33m"
+RED="\033[1;31m"
+RESET="\033[0m"
+
+# 删除先前的构建目录（如果存在）
+if [ -d "build" ]; then
+    echo -e "${YELLOW}Deleting the 'build' directory...${RESET}"
+    sudo rm -r build
+fi
+
+# 构建项目
+echo -e "${YELLOW}Building the project...${RESET}"
+cmake -B build && cmake --build build
+
+echo -e "-- Build complete. Check the 'build' directory for the generated executable."

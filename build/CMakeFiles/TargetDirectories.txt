@@ -1,0 +1,4 @@
+/home/ubuntu/RDMA-examples/build/CMakeFiles/client.dir
+/home/ubuntu/RDMA-examples/build/CMakeFiles/server.dir
+/home/ubuntu/RDMA-examples/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/RDMA-examples/build/CMakeFiles/rebuild_cache.dir
