@@ -12,8 +12,17 @@ if [ -d "build" ]; then
     sudo rm -r build
 fi
 
+if [ -d "bin" ]; then
+    echo -e "${YELLOW}Deleting the 'bin' directory...${RESET}"
+    sudo rm -r bin
+fi
+
 # 构建项目
 echo -e "${YELLOW}Building the project...${RESET}"
 cmake -B build && cmake --build build
+
+mkdir bin
+mv build/server bin/
+mv build/client bin/
 
 echo -e "-- Build complete. Check the 'build' directory for the generated executable."

@@ -1,1 +1,0 @@
-/usr/bin/cc -O2 -flto -march=native -mtune=native CMakeFiles/server.dir/src/server.c.o -o server  /usr/lib/x86_64-linux-gnu/librdmacm.so /usr/lib/x86_64-linux-gnu/libibverbs.so 

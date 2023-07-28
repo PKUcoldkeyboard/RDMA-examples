@@ -1,8 +1,7 @@
 #ifndef SERVER_H_
 #define SERVER_H_
 #pragma once
-#include <rdma/rdma_cma.h>
-#include <infiniband/verbs.h>
+#include "utils.h"
 
 /* RDMA管理资源声明 */
 static struct rdma_event_channel *cm_channel = NULL;
@@ -20,7 +19,10 @@ static struct ibv_recv_wr client_recv_wr, *bad_client_recv_wr = NULL;
 static struct ibv_send_wr server_send_wr, *bad_server_send_wr = NULL;
 static struct ibv_sge client_recv_sge, server_send_sge;
 
-
-
+static int init_client_resources();
+static int start_rdma_server(struct sockaddr_in *server_addr);
+static int accept_client_connection();
+static int send_server_metadata();
+static int disconnect_and_cleanup();
 
 #endif // SERVER_H_
