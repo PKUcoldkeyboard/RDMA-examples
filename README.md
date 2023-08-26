@@ -19,7 +19,7 @@ RDMA-examples is a repository of practical code examples showcasing the fundamen
 - Compare the content of the first and second local buffers for matching.
 - Disconnect.
   
-##Usage
+## Usage
 - To start the server, use the following command:
 
 ```
